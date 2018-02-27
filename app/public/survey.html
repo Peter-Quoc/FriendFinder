@@ -2,253 +2,342 @@
 <html>
 
 <head>
-   <title></title>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-      crossorigin="anonymous">
+    <title>FriendFinder!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
-   <div class="container">
-      <div class="jumbotron">
-         <h1 class="display-3"> Friend Finder: Survey</h1>
-         <hr class="my-4">
-         <p>
-            <h3>Based on you, rate the statement from 1 (Strongly Disagree) to 5 (Strongly Agree) that best fits your personality.</h3>
-         </p>
-      </div>
-   </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3"> Friend Finder: Survey</h1>
+            <hr class="my-4">
+            <p>
+                <h5>Based on you, rate the statement from 1 (Strongly Disagree) to 5 (Strongly Agree) that best fits your personality.</h5>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <h1>About You</h1>
+        <div class="userInfo">
+            <label for="userName">Name (Required)</label>
+            <input type="text" class="choices" name="userName" placeholder="Your Name" required>
+        </div>
+        <div>
+            <div class="userInfo">
+                <label for="userImage">Link to Photo Image (Required)</label>
+                <input type="text" class="choices" name="userImage" placeholder="Your Image URL" required>
+            </div>
+        </div>
+    </div>
 
-   <div class="container">
-      <div class="question">
-         <div class="statement">
-            <h3>1. I enjoy meeting new people.</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q1choice1" value="1">
-            <label for="q1choice1">1</label>
+    <div class="container">
+        <h1>Survey Questions</h1>
+        <div class="question">
+            <div class="statement">
+                <h3>1. I enjoy meeting new people.</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q1choice1" value="1">
+                <label for="q1choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q1choice2" value="2">
-            <label for="q1choice2">2</label>
+                <input type="radio" class="choices" name="q1choice2" value="2">
+                <label for="q1choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q1choice3" value="3">
-            <label for="q1choice3">3</label>
+                <input type="radio" class="choices" name="q1choice3" value="3">
+                <label for="q1choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q1choice4" value="4">
-            <label for="q1choice4">4</label>
+                <input type="radio" class="choices" name="q1choice4" value="4">
+                <label for="q1choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q1choice5" value="5">
-            <label for="q1choice5">5</label>
-         </div>
-      </div>
-      <div class="question">
-         <div class="statement">
-            <h3>2. I like helping people.</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q2choice1" value="1">
-            <label for="q2choice1">1</label>
+                <input type="radio" class="choices" name="q1choice5" value="5">
+                <label for="q1choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div class="question">
+            <div class="statement">
+                <h3>2. I like helping people.</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q2choice1" value="1">
+                <label for="q2choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q2choice2" value="2">
-            <label for="q2choice2">2</label>
+                <input type="radio" class="choices" name="q2choice2" value="2">
+                <label for="q2choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q2choice3" value="3">
-            <label for="q2choice3">3</label>
+                <input type="radio" class="choices" name="q2choice3" value="3">
+                <label for="q2choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q2choice4" value="4">
-            <label for="q2choice4">4</label>
+                <input type="radio" class="choices" name="q2choice4" value="4">
+                <label for="q2choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q2choice5" value="5">
-            <label for="q2choice5">5</label>
-         </div>
-      </div>
-      <div class="question">
-         <div class="statement">
-            <h3>3. I'm easily disappointed</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q3choice1" value="1">
-            <label for="q3choice1">1</label>
+                <input type="radio" class="choices" name="q2choice5" value="5">
+                <label for="q2choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div class="question">
+            <div class="statement">
+                <h3>3. I'm easily disappointed</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q3choice1" value="1">
+                <label for="q3choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q3choice2" value="2">
-            <label for="q3choice2">2</label>
+                <input type="radio" class="choices" name="q3choice2" value="2">
+                <label for="q3choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q3choice3" value="3">
-            <label for="q3choice3">3</label>
+                <input type="radio" class="choices" name="q3choice3" value="3">
+                <label for="q3choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q3choice4" value="4">
-            <label for="q3choice4">4</label>
+                <input type="radio" class="choices" name="q3choice4" value="4">
+                <label for="q3choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q3choice5" value="5">
-            <label for="q3choice5">5</label>
-         </div>
-      </div>
-      <div class="question">
-         <div class="statement">
-            <h3>4. I enjoy repairing things.</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q4choice1" value="1">
-            <label for="q4choice1">1</label>
+                <input type="radio" class="choices" name="q3choice5" value="5">
+                <label for="q3choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div class="question">
+            <div class="statement">
+                <h3>4. I enjoy repairing things.</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q4choice1" value="1">
+                <label for="q4choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q4choice2" value="2">
-            <label for="q4choice2">2</label>
+                <input type="radio" class="choices" name="q4choice2" value="2">
+                <label for="q4choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q4choice3" value="3">
-            <label for="q4choice3">3</label>
+                <input type="radio" class="choices" name="q4choice3" value="3">
+                <label for="q4choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q4choice4" value="4">
-            <label for="q4choice4">4</label>
+                <input type="radio" class="choices" name="q4choice4" value="4">
+                <label for="q4choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q4choice5" value="5">
-            <label for="q4choice5">5</label>
-         </div>
-      </div>
-      <div class="question">
-         <div class="statement">
-            <h3>5. I love large parties.</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q5choice1" value="1">
-            <label for="q5choice1">1</label>
+                <input type="radio" class="choices" name="q4choice5" value="5">
+                <label for="q4choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div class="question">
+            <div class="statement">
+                <h3>5. I love large parties.</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q5choice1" value="1">
+                <label for="q5choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q5choice2" value="2">
-            <label for="q5choice2">2</label>
+                <input type="radio" class="choices" name="q5choice2" value="2">
+                <label for="q5choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q5choice3" value="3">
-            <label for="q5choice3">3</label>
+                <input type="radio" class="choices" name="q5choice3" value="3">
+                <label for="q5choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q5choice4" value="4">
-            <label for="q5choice4">4</label>
+                <input type="radio" class="choices" name="q5choice4" value="4">
+                <label for="q5choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q5choice5" value="5">
-            <label for="q5choice5">5</label>
-         </div>
-      </div>
-      <div class="question">
-         <div class="statement">
-            <h3>6. I like to solve complex problems.</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q6choice1" value="1">
-            <label for="q6choice1">1</label>
+                <input type="radio" class="choices" name="q5choice5" value="5">
+                <label for="q5choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div class="question">
+            <div class="statement">
+                <h3>6. I like to solve complex problems.</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q6choice1" value="1">
+                <label for="q6choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q6choice2" value="2">
-            <label for="q6choice2">2</label>
+                <input type="radio" class="choices" name="q6choice2" value="2">
+                <label for="q6choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q6choice3" value="3">
-            <label for="q6choice3">3</label>
+                <input type="radio" class="choices" name="q6choice3" value="3">
+                <label for="q6choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q6choice4" value="4">
-            <label for="q6choice4">4</label>
+                <input type="radio" class="choices" name="q6choice4" value="4">
+                <label for="q6choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q6choice5" value="5">
-            <label for="q6choice5">5</label>
-         </div>
-      </div>
-      <div class="question">
-         <div class="statement">
-            <h3>7. I dislike being the center of attention.</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q7choice1" value="1">
-            <label for="q7choice1">1</label>
+                <input type="radio" class="choices" name="q6choice5" value="5">
+                <label for="q6choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div class="question">
+            <div class="statement">
+                <h3>7. I dislike being the center of attention.</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q7choice1" value="1">
+                <label for="q7choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q7choice2" value="2">
-            <label for="q7choice2">2</label>
+                <input type="radio" class="choices" name="q7choice2" value="2">
+                <label for="q7choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q7choice3" value="3">
-            <label for="q7choice3">3</label>
+                <input type="radio" class="choices" name="q7choice3" value="3">
+                <label for="q7choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q7choice4" value="4">
-            <label for="q7choice4">4</label>
+                <input type="radio" class="choices" name="q7choice4" value="4">
+                <label for="q7choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q7choice5" value="5">
-            <label for="q7choice5">5</label>
-         </div>
-      </div>
-      <div class="question">
-         <div class="statement">
-            <h3>8. I warm up quickly to others.</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q8choice1" value="1">
-            <label for="q8choice1">1</label>
+                <input type="radio" class="choices" name="q7choice5" value="5">
+                <label for="q7choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div class="question">
+            <div class="statement">
+                <h3>8. I warm up quickly to others.</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q8choice1" value="1">
+                <label for="q8choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q8choice2" value="2">
-            <label for="q8choice2">2</label>
+                <input type="radio" class="choices" name="q8choice2" value="2">
+                <label for="q8choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q8choice3" value="3">
-            <label for="q8choice3">3</label>
+                <input type="radio" class="choices" name="q8choice3" value="3">
+                <label for="q8choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q8choice4" value="4">
-            <label for="q8choice4">4</label>
+                <input type="radio" class="choices" name="q8choice4" value="4">
+                <label for="q8choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q8choice5" value="5">
-            <label for="q8choice5">5</label>
-         </div>
-      </div>
-      <div class="question">
-         <div class="statement">
-            <h3>9. I like to visit new places.</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q9choice1" value="1">
-            <label for="q9choice1">1</label>
+                <input type="radio" class="choices" name="q8choice5" value="5">
+                <label for="q8choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div class="question">
+            <div class="statement">
+                <h3>9. I like to visit new places.</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q9choice1" value="1">
+                <label for="q9choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q9choice2" value="2">
-            <label for="q9choice2">2</label>
+                <input type="radio" class="choices" name="q9choice2" value="2">
+                <label for="q9choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q9choice3" value="3">
-            <label for="q9choice3">3</label>
+                <input type="radio" class="choices" name="q9choice3" value="3">
+                <label for="q9choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q9choice4" value="4">
-            <label for="q9choice4">4</label>
+                <input type="radio" class="choices" name="q9choice4" value="4">
+                <label for="q9choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q9choice5" value="5">
-            <label for="q9choice5">5</label>
-         </div>
-      </div>
-      <div class="question">
-         <div class="statement">
-            <h3>10. I choose my words with care.</h3>
-         </div>
-         <div>
-            <input type="radio" class="choices" name="q10choice1" value="1">
-            <label for="q10choice1">1</label>
+                <input type="radio" class="choices" name="q9choice5" value="5">
+                <label for="q9choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div class="question">
+            <div class="statement">
+                <h3>10. I choose my words with care.</h3>
+            </div>
+            <div>
+                <input type="radio" class="choices" name="q10choice1" value="1">
+                <label for="q10choice1">1 - Strongly Disagree</label>
 
-            <input type="radio" class="choices" name="q10choice2" value="2">
-            <label for="q10choice2">2</label>
+                <input type="radio" class="choices" name="q10choice2" value="2">
+                <label for="q10choice2">2 - Disagree</label>
 
-            <input type="radio" class="choices" name="q10choice3" value="3">
-            <label for="q10choice3">3</label>
+                <input type="radio" class="choices" name="q10choice3" value="3">
+                <label for="q10choice3">3 - Neutral</label>
 
-            <input type="radio" class="choices" name="q10choice4" value="4">
-            <label for="q10choice4">4</label>
+                <input type="radio" class="choices" name="q10choice4" value="4">
+                <label for="q10choice4">4 - Agree</label>
 
-            <input type="radio" class="choices" name="q10choice5" value="5">
-            <label for="q10choice5">5</label>
-         </div>
-      </div>
-      <div>
-         <button type="button" class="btn btn-primary btn-lg" id="submitSurveyBtn">Submit</button>
-      </div>
-   </div>
-   <footer>
-      Copyright 2018
-   </footer>
-   <style>
-      body {
-         text-align: center;
-      }
+                <input type="radio" class="choices" name="q10choice5" value="5">
+                <label for="q10choice5">5 - Strongly Agree</label>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg" id="submitSurveyBtn">Submit</button>
+        </div>
+        <div id="matchModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Copyright 2018
+    </footer>
+    <script>
+        //modal
+        var modal = $('#matchModal');
+        var btn = $("#submitSurveyBtn");
+        var span = $(".close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
 
-      .question {
-         padding: 10px;
-      }
+        $('#submitSurveyBtn').on('click', function () {
+            $(".question").each(function () {
+                userSurveyChoice = [];
+                var UserChoice = $(this).attr('value').val();
+                userSurveyChoice.push(value);
+            });
+            console.log(userSurveyChoice);
 
-      footer {
-         padding: 5vh;
-      }
-   </style>
+        });
+    </script>
+    <style>
+        .userInfo {
+            padding: 10px;
+        }
+
+        .question {
+            padding: 10px;
+        }
+
+        footer {
+            padding: 5vh;
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Modal Content/Box */
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 
 </body>
 

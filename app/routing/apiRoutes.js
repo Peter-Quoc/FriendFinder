@@ -20,20 +20,15 @@ module.exports = function (app) {
       }
 
       if (difference < initialTotalDifference) {
-        closestMatch = friend;
+        bestMatch = friend;
         initialTotalDifference = difference;
       } else if (initialTotalDifference === 0) {
-        closestMatch = friend;
+        bestMatch = friend;
         initialTotalDifference = difference;
       }
     });
 
     Friends.push(req.body);
-    res.send(closestMatch);
-  });
-
-  app.post("/api/clear", function () {
-    friendData = [];
-    console.log(tableData);
+    res.send(bestMatch);
   });
 };
