@@ -3,9 +3,13 @@
 
 <head>
     <title>FriendFinder!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-        crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -20,14 +24,14 @@
     </div>
     <div class="container">
         <h1>About You</h1>
-        <div class="userInfo">
-            <label for="userName">Name (Required)</label>
-            <input type="text" class="choices" name="userName" placeholder="Your Name" required>
-        </div>
+        <form class="userInfo input-group">
+            <span class="input-group-addon" for="userName" id="basic-addon1">Name (Required)</span>
+            <input type="text" class="choices form-control" name="userName" placeholder="Your Name" required>
+        </form>
         <div>
-            <div class="userInfo">
-                <label for="userImage">Link to Photo Image (Required)</label>
-                <input type="text" class="choices" name="userImage" placeholder="Your Image URL" required>
+            <div class="userInfo input-group">
+                <span class="input-group-addon" for="userImage" id="basic-addon1">Link to Photo Image (Required)</span>
+                <input type="text" class="choices form-control" name="userImage" placeholder="Your Image URL" required>
             </div>
         </div>
     </div>
@@ -244,16 +248,26 @@
                 <label for="q10choice5">5 - Strongly Agree</label>
             </div>
         </div>
-        <div>
-            <button type="button" class="btn btn-primary btn-lg" id="submitSurveyBtn">Submit</button>
-        </div>
-        <div id="matchModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="submitSurveyBtn">Find your Match!</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">Match Found!</h2>
+                    </div>
+                    <div class="modal-body" id="modal-match">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
     <footer>
         <div class="container">
@@ -263,7 +277,7 @@
                     <footer>
                         <span>
                             <a href="/api/friends">API Friends List</a> |
-                        <a href="https://github.com/Peter-Quoc/FriendFinder">GitHub Repo</a>
+                            <a href="https://github.com/Peter-Quoc/FriendFinder">GitHub Repo</a>
                         </span>
                     </footer>
 
@@ -272,87 +286,12 @@
         </div>
         Copyright 2018
     </footer>
-    <script>
-        //modal
-        var modal = $('#matchModal');
-        var btn = $("#submitSurveyBtn");
-        var span = $(".close")[0];
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        $('#submitSurveyBtn').on('click', function () {
-            $(".question").each(function () {
-                userSurveyChoice = [];
-                var UserChoice = $(this).attr('value').val();
-                userSurveyChoice.push(value);
-            });
-            console.log(userSurveyChoice);
-
-        });
-    </script>
     <style>
-        .userInfo {
-            padding: 10px;
-        }
-
-        .question {
-            padding: 10px;
-        }
-
         footer {
-            padding: 5vh;
             text-align: center;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        /* Modal Content/Box */
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-        /* The Close Button */
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
+            padding: 10px;
         }
     </style>
-
 </body>
 
 </html>
